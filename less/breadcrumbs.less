@@ -24,3 +24,27 @@
     color: @breadcrumb-active-color;
   }
 }
+
+.cw-breadcrumb {
+  .breadcrumb;
+
+  background-color: @gray-dark;
+  margin-top: (0 - @navbar-margin-bottom);
+  padding: 0;
+  border-radius: 0;
+
+  ul {
+    background-color: inherit;
+    margin-bottom: 0;
+
+    > li.active,
+    > li.active a {
+      color: #fff;
+    }
+
+    a {
+      color: @gray-lighter;
+      text-decoration: none;
+    }
+  }
+}
