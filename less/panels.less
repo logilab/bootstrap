@@ -16,6 +16,10 @@
 .panel-body {
   padding: @panel-body-padding;
   &:extend(.clearfix all);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Optional heading
