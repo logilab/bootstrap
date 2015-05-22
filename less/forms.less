@@ -56,11 +56,6 @@ input[type="checkbox"] {
   line-height: normal;
 }
 
-// Set the height of file controls to match text inputs
-input[type="file"] {
-  display: block;
-}
-
 // Make range inputs behave like textual form controls
 input[type="range"] {
   display: block;
@@ -113,8 +108,6 @@ output {
 // input[type="color"]
 
 .form-control {
-  display: block;
-  width: 100%;
   height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
@@ -153,6 +146,12 @@ output {
   // Reset height for `textarea`s
   textarea& {
     height: auto;
+    display: block;
+  }
+
+  textarea&,
+  input[type="text"]& {
+    max-width: 100%;
   }
 }
 
